@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+
+    <style>
+        body {
+            font-size: 180%;
+            font-family: 'Playfair Display', serif;
+        }
+        /* --- */
+        a, a:link, a:visited, a:active {
+            color:  rgb(40, 50, 150);
+            text-decoration: none;
+        }
+        a:hover {
+            color:  rgb(40, 50, 180);
+        }
+
+        h1 {
+            margin-bottom: 0;
+        }
+        p.subtitle { margin: 0 0 2rem 0;}
+        p.subtitle em {  color: #333 }
+
+        * {
+            box-sizing: border-box;
+        }
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #left, #right {
+            padding: 10px 60px 10px 60px;
+        }
+        #left {
+            text-align: right;
+            flex: 32%;
+            max-width: 20rem;
+        }
+        #right {
+            flex: 67%;
+            text-align: left;
+            max-width: 90rem;
+        }
+
+
+        /* book index */
+        #book-index { display: none; }
+        #book-index {
+            padding: 0 2rem;
+            position: fixed;
+            top: 0;
+            overflow-y: auto;
+            height: 100vh;
+            background-color: white;
+            width: 40vw;
+        }
+        #close-btn { position: relative; top: 3.2rem; float: right}
+        /* book index ul */
+        #book-index ul li {
+            list-style-type: none;
+            margin-bottom: 1rem;
+        }
+        #book-index ul li a { text-decoration: underline; }
+        #book-index ul li span { text-transform: uppercase; font-size: 1rem; }
+
+
+        /* Responsive layout - makes a one column-layout instead of a two-column layout */
+        @media (max-width: 800px) {
+            #book-index {
+                width: 100vw;
+            }
+            #left, #right {
+                text-align: left;
+                padding: .8rem;
+            }
+            #left {
+
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Start: The container -->
+<div id="container">
+
+    <!-- Start: Left current chapter -->
+    <div id="left">
+
+        <!-- Start: Sticky container -->
+        <div id="sticky-container">
+
+            <!-- Start: The button -->
+            <div id="button">
+                <button class="flip-btn" id="btn">Book Title</button>
+            </div><!-- End: The button -->
+
+            <!-- Start: Current chapter heading, title and next chapter link -->
+            <div id="current-chapter">
+
+                <p class="chapter-heading">
+                    Chapter 1:
+                </p>
+
+                <h3>
+                    Chapter title
+                </h3>
+
+                <p id="next-previous">
+                    <a title="Next Chapter" rel="next" href="">Next</a>
+                </p>
+
+            </div><!-- End: Current chapter heading, title and next chapter link -->
+
+        </div><!-- End: Sticky container -->
+
+    </div><!-- End: Left current chapter -->
+
+    <!-- Start: Content column aka right -->
+    <div id="right">
+        <h2>
+            Chapter title
+        </h2>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+    </div>
+
+</div><!-- End: The container -->
+
+<!-- Start: Chapter Index -->
+<div id="book-index">
+
+    <a title="Show Index" class="flip-btn" id="close-btn" href="">&#9746;</a>
+    <h1>
+        <a href="">
+            Book Title
+        </a>
+    </h1>
+    <p class="subtitle">
+        Short short introduction to this wonderful book you are writing.
+        <br/><em>by Someone</em>
+    </p>
+
+    <!-- Start: Book index -->
+    <ul>
+        <li>
+            <span>Chapter 1</span><br/>
+            <a title="Introduction" href="">Introduction</a>
+        </li>
+        <li>
+            <span>Chapter 2</span><br/>
+            <a title="Getting Started" href="">Getting Started</a>
+        </li>
+        <li>
+            <span>Chapter 3</span><br/>
+            <a title="The Crux" href="">The Crux</a>
+        </li>
+        <li>
+            <span>Chapter 4</span><br/>
+            <a title="more.." href="">more..</a>
+        </li>
+    </ul><!-- End: Book index -->
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+</div>
+
+<script>
+
+    const buttons = document.querySelectorAll('.flip-btn');
+    Array.from(buttons).forEach(function(buttons) {
+        buttons.addEventListener('click', flipIndex);
+    });
+    // const btn = document.getElementById("btn");
+    // btn.addEventListener("click", showChapterIndex, false);
+
+    function flipIndex()
+    {
+        let book_index = document.getElementById("book-index");
+
+        if (isHidden(book_index)) {
+            book_index.style.display = "block";
+        } else {
+            book_index.style.display = "none";
+        }
+        return false;
+    }
+    // Where el is the DOM element you'd like to test for visibility
+    function isHidden(el) {
+        return (el.offsetParent === null)
+    }
+</script>
+
+</body>
+</html>

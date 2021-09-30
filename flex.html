@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta>
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+      /*@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,400&family=Scheherazade+New:wght@700&display=swap');*/
+      body {
+          font-size: 150%;
+          font-family: 'Playfair Display', serif;
+
+      }
+
+      a, a:link, a:visited, a:active {
+          color:  rgb(40, 50, 150);
+          text-decoration: none;
+      }
+      a.underlined {
+          text-decoration: underline;
+      }
+      h2 {
+          font-size: 240%;
+          margin-top: 0;
+          margin-bottom: 0;
+      }
+      p.subtitle { margin: 0 0 70px 0;}
+
+
+      #sticky-btn {
+          position: -webkit-sticky;
+          position: sticky;
+          top: 20px
+      }
+      button.big-button {
+          background-color: rgb(40, 50, 150);
+          border:none;
+          border-radius: 35px;
+          text-decoration: none;
+          padding: 15px 30px 15px 30px ;
+          color: white;
+          font-weight: bold;
+          font-size: 140%;
+          display: inline-block;
+          margin: 0;
+
+      }
+      button.big-button:hover {
+          cursor: pointer;
+      }
+      .chapter-heading {
+          margin: 60px 0 0px 0px;
+          font-size: 90%;
+          font-weight: 500;
+      }
+
+      #index {
+          display: none;
+      }
+      #book-index {
+          list-style-type: none;
+          overflow-y: auto;
+          height: 80vh;
+      }
+      #book-index li {
+          margin-bottom: 20px;
+      }
+      /* Structure */
+      * {
+          box-sizing: border-box;
+      }
+      .container {
+          max-width: 1600px;
+      }
+      .box {
+          display: flex;
+          flex-wrap: wrap;
+          text-align: center;
+      }
+      .one {
+          text-align: right;
+          /*background-color: #f1f1f1;*/
+          padding: 10px 60px 10px 60px;
+          flex: 32%;
+      }
+      .two {
+          background-color: white;
+          padding: 165px 60px;
+          flex: 67%;
+          text-align: left;
+
+      }
+      .two p {
+          font-size: 120%;
+      }
+      /* Responsive layout - makes a one column-layout instead of a two-column layout */
+      @media (max-width: 800px) {
+          .one, .two {
+              flex: 100%;
+          }
+          .one, .two {
+              font-size: 70%;
+              padding: 10px 10px;
+              text-align: left;
+
+          }
+
+      }
+      /* Responsive layout - makes a one column-layout instead of a two-column layout */
+      @media (max-width: 420px) {
+          .one {
+              font-size: 60%;
+              margin-top: 40px;
+          }
+      }
+      /* -----
+        SVG Icons - svgicons.sparkk.fr
+      ----- */
+
+      .svg-icon {
+          width: 1.2em;
+          height: 1.2em;
+
+      }
+
+      .svg-icon path,
+      .svg-icon polygon,
+      .svg-icon rect {
+          fill: #ffffff;
+      }
+
+      .svg-icon circle {
+          stroke: #ffffff;
+          stroke-width: 1;
+      }
+  </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="box">
+
+            <div class="one">
+
+                <div id="sticky-btn">
+                    <button class="big-button" id="mnu-btn">
+                        SixTasks<sup style="font-size: 60%; ">tm</sup>
+                    </button>
+
+                    <div id="chapter" style="position: sticky">
+
+                        <p class="chapter-heading">
+                            CHAPTER 5:
+                        </p>
+                        <h2>
+                            <a href="0">
+                                Fix Time and Budget, Flex Scope
+                            </a>
+                        </h2>
+                        <p>
+                            <a class="underlined" href="0">
+                                Next: Have an Enemy
+                            </a>
+                        </p>
+
+                    </div>
+
+
+                    <div id="index">
+
+                        <ul id="book-index">
+
+                            <p class="chapter-heading">
+                                &nbsp;
+                            </p>
+
+                            <h2>
+                                <a href="0">
+                                    SixTasks<sup style="font-size: 60%; ">tm</sup>
+                                </a>
+                            </h2>
+                            <p class="subtitle">A simple system to get [the right] things done!</p>
+
+                            <li>CAPTHER 1<br/>
+                                <a href="">What is Getting Real</a>
+                            </li>
+                            <li>CAPTHER 2<br/>
+                                <a href="">What is Getting Real</a>
+                            </li>
+                            <li>CAPTHER 3<br/>
+                                <a href="">What is Getting Real</a><br/>
+                                <a href="">What is Getting Real</a>
+                            </li>
+                            <li>CAPTHER 1<br/>
+                                <a href="">What is Getting Real</a>
+                            </li>
+                            <li>CAPTHER 2<br/>
+                                <a href="">What is Getting Real</a>
+                            </li>
+                            <li>CAPTHER 3<br/>
+                                <a href="">What is Getting Real</a>
+                            </li>
+                            <li>CAPTHER 3<br/>
+                                <a href="">What is Getting Real</a><br/>
+                                <a href="">What is Getting Real</a>
+                            </li>
+                            <li>CAPTHER 1<br/>
+                                <a href="">What is Getting Real</a>
+                            </li>
+                            <li>CAPTHER 2<br/>
+                                <a href="">What is Getting Real</a>
+                            </li>
+                            <li>CAPTHER 3<br/>
+                                <a href="">What is Getting Real</a>
+                            </li>
+                        </ul>
+
+                        <p>&nbsp</p>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div class="two">
+
+
+                <h2>Underdo your competition </h2>
+
+                <p>
+                    Conventional wisdom says that to beat your competitors you need to one-up them. If they have four features, you need five (or 15, or 25). If they’re spending x, you need to spend xx. If they have 20, you need 30.
+                </p>
+
+                <p>
+                    This sort of one-upping Cold War mentality is a dead-end. It’s an expensive, defensive, and paranoid way of building products. Defensive, paranoid companies can’t think ahead, they can only think behind. They don’t lead, they follow.
+                </p>
+
+                <p>&nbsp; a</p>
+                <p>&nbsp; a</p>
+                <p>&nbsp; a</p>
+                <p>&nbsp; a</p>
+                <p>&nbsp; a</p>
+                <p>&nbsp; a</p>
+                <p>&nbsp; a</p>
+                <p>&nbsp; a</p>
+                <p>&nbsp; a</p>
+                <p>&nbsp; a</p>
+                <p>&nbsp; a</p>
+                <p>&nbsp; a</p>
+                <p>&nbsp; a</p>
+                <p>&nbsp; a</p>
+                <p>&nbsp; a</p>
+                <p>&nbsp; a</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+        const btn = document.getElementById("mnu-btn");
+        const btn2 = document.getElementById("mnu-btn2");
+        btn.addEventListener("click", switchMenu, false);
+        btn2.addEventListener("click", switchMenu, false);
+
+        function switchMenu()
+        {
+            let book_index = document.getElementById("index");
+            let chapter = document.getElementById("chapter");
+
+            if (isHidden(book_index)) {
+                book_index.style.display = "block";
+                chapter.style.display = "none"
+            } else {
+                book_index.style.display = "none";
+                chapter.style.display = "block"
+            }
+            return false;
+        }
+        // Where el is the DOM element you'd like to test for visibility
+        function isHidden(el) {
+            return (el.offsetParent === null)
+        }
+    </script>
+</body>
+</html>
