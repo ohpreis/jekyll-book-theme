@@ -1,0 +1,156 @@
+$primary-color:  rgb(40, 50, 180);
+$primary-color-light: rgb(40, 124, 180);
+$medium-gray: #708090;
+
+body {
+  font-size: 180%;
+  font-family: 'Playfair Display', serif;
+}
+div, img {
+  box-sizing: border-box;
+}
+
+/* Links
+============================================== */
+a, a:link, a:visited, a:active {
+  color:  $primary-color;
+  text-decoration: none;
+}
+a:hover {
+  color:  $primary-color-light;
+}
+a.back-to { /* Link to a main website */
+  text-decoration: underline;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+/* Buttons
+============================================== */
+button.big-button {
+  background-color: $primary-color;
+  border:none;
+  border-radius: 35px;
+  text-decoration: none;
+  padding: 15px 30px 15px 30px ;
+  color: white;
+  font-weight: bold;
+  font-size: 140%;
+  display: inline-block;
+  margin: 0;
+}
+button.medium-button {
+  background-color: $primary-color;
+  border:none;
+  border-radius: 35px;
+  text-decoration: none;
+  padding: 15px 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  display: inline-block;
+  margin: 0;
+}
+button.big-button:hover, button.medium-button:hover {
+  cursor: pointer;
+  background-color: $primary-color-light;
+}
+
+/* Headings & Paragraphs
+============================================== */
+h1 {  /* Book and page titles */
+  margin: 1rem 0;
+  font-size: 4rem;
+}
+h2 {
+  margin: 4rem 0 0;
+  padding: .5rem 0;
+  border-top: thin solid $medium-gray;
+}
+
+p.subtitle { margin: 0 0 2rem 0; font-size: 2.5rem}
+p.fine-print { font-size: smaller; }
+p.footer {  border-top: thin solid $medium-gray; padding-top: 2rem; font-size: 1.2rem; font-weight: 600; font-style: italic }
+ul.book-index { /* book index ul */
+  padding: 0;
+}
+ul.book-index li {
+  list-style-type: none;
+  margin-bottom: 1rem;
+}
+ul.book-index li a { text-decoration: underline; }
+ul.book-index li span { text-transform: uppercase; font-size: 1rem; }
+
+/* Dividers
+============================================== */
+hr {
+  margin-top: 4rem;
+  background-color: $medium-gray;
+}
+
+
+/* Images
+============================================== */
+.book-cover { /* Book Cover */
+  max-width: 100%;
+}
+
+/* Containers
+============================================== */
+#container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.landing { /* Index/Home Page additional padding */
+  padding-top: 4rem;
+}
+
+#left, #right { /* columns */
+  padding: 10px 30px 10px 30px;
+}
+#left {
+  text-align: right;
+  flex: 32%;
+  max-width: 20rem;
+}
+#right {
+  flex: 67%;
+  text-align: left;
+  max-width: 80rem;
+}
+
+
+
+
+
+
+/* book index */
+#book-index { display: none; }
+#book-index {
+  padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  overflow-y: auto;
+  height: 100vh;
+  background-color: white;
+  width: 40vw;
+}
+#close-btn { position: relative; top: 3.2rem; float: right}
+
+
+/* Responsive stuff
+============================================== */
+@media (max-width: 800px) {
+  div, img { /* reset the box-sizing */
+    box-sizing: content-box;
+  }
+  #book-index {
+    width: 100vw;
+  }
+  .landing { /* No padding on a mobile device */
+    padding-top: 0;
+  }
+  #left, #right { /* align the content for mobile use */
+    text-align: center;
+  }
+}

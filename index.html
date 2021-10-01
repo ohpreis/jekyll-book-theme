@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<!-- Start: The container -->
+<div id="container" class="landing">
+
+    <!-- Start: Left current chapter -->
+    <div id="left">
+
+        <!-- Start: Sticky container -->
+        <div id="sticky-container">
+
+            <!-- Start: site link, cover image -->
+            <div>
+
+                <!-- A link to the writers external website, if they have one -->
+                <p>
+                    <a class="back-to" href="">&larr; Your website</a>
+                </p>
+
+                <!-- Should the user want to show a book cover image -->
+                <p>
+                    <img src="images/cover-from-unsplash.jpg" class="book-cover" alt="" title="" />
+                </p>
+
+            </div><!-- End: Current chapter heading, title and next chapter link -->
+
+        </div><!-- End: Sticky container -->
+
+    </div><!-- End: Left current chapter -->
+
+    <!-- Start: Content column aka right -->
+    <div id="right">
+
+        <!-- The books title -->
+        <h1>
+            Book title
+        </h1>
+
+        <!-- The books subtitle -->
+        <p class="subtitle">
+            One morning, when Gregor Sasa woke from troubled dreams, he found himself transformed
+            in his bed into a horrible vermin.
+        </p>
+
+        <!-- Start reading, or continue reading where they left off. -->
+        <p>
+            <button name="continue" class="medium-button">Continue from where you left off &rarr; </button>
+        </p>
+
+
+        <!-- Chapter heading -->
+        <h2>
+            Introduction
+        </h2>
+
+        <!-- Start: Book index -->
+        <ul class="book-index">
+            <li>
+                <span>Chapter 1</span><br/>
+                <a title="Introduction" href="">Introduction</a>
+            </li>
+            <li>
+                <span>Chapter 2</span><br/>
+                <a title="Getting Started" href="">Getting Started</a>
+            </li>
+            <li>
+                <span>Chapter 3</span><br/>
+                <a title="The Crux" href="">The Crux</a>
+            </li>
+            <li>
+                <span>Chapter 4</span><br/>
+                <a title="more.." href="">more..</a>
+            </li>
+        </ul><!-- End: Book index -->
+
+        <h2>
+            Getting Started
+        </h2>
+
+        <!-- Start: Book index -->
+        <ul class="book-index">
+            <li>
+                <span>Chapter 1</span><br/>
+                <a title="Introduction" href="">Introduction</a>
+            </li>
+            <li>
+                <span>Chapter 2</span><br/>
+                <a title="Getting Started" href="">Getting Started</a>
+            </li>
+            <li>
+                <span>Chapter 3</span><br/>
+                <a title="The Crux" href="">The Crux</a>
+            </li>
+            <li>
+                <span>Chapter 4</span><br/>
+                <a title="more.." href="">more..</a>
+            </li>
+        </ul><!-- End: Book index -->
+
+        <br/>
+
+        <!-- Footnote or fine-print -->
+        <p class="fine-print">
+            Should you need it, add some fine-print. But most folks will not need that. Or perhaps they do.
+            Anyway, you figure that out on your own.
+        </p>
+
+        <!-- Short footer -->
+        <p class="footer">
+            &copy;2000-2022 You, your name, perhaps an address
+        </p>
+    </div>
+
+</div><!-- End: The container -->
+
+
+<script>
+
+    const buttons = document.querySelectorAll('.flip-btn');
+    Array.from(buttons).forEach(function(buttons) {
+        buttons.addEventListener('click', flipIndex);
+    });
+    // const btn = document.getElementById("btn");
+    // btn.addEventListener("click", showChapterIndex, false);
+
+    function flipIndex()
+    {
+        let book_index = document.getElementById("book-index");
+
+        if (isHidden(book_index)) {
+            book_index.style.display = "block";
+        } else {
+            book_index.style.display = "none";
+        }
+        return false;
+    }
+    // Where el is the DOM element you'd like to test for visibility
+    function isHidden(el) {
+        return (el.offsetParent === null)
+    }
+</script>
+
+</body>
+</html>

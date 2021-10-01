@@ -4,86 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
 
-    <style>
-        body {
-            font-size: 180%;
-            font-family: 'Playfair Display', serif;
-        }
-        /* --- */
-        a, a:link, a:visited, a:active {
-            color:  rgb(40, 50, 150);
-            text-decoration: none;
-        }
-        a:hover {
-            color:  rgb(40, 50, 180);
-        }
-
-        h1 {
-            margin-bottom: 0;
-        }
-        p.subtitle { margin: 0 0 2rem 0;}
-        p.subtitle em {  color: #333 }
-
-        * {
-            box-sizing: border-box;
-        }
-        #container {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        #left, #right {
-            padding: 10px 60px 10px 60px;
-        }
-        #left {
-            text-align: right;
-            flex: 32%;
-            max-width: 20rem;
-        }
-        #right {
-            flex: 67%;
-            text-align: left;
-            max-width: 90rem;
-        }
-
-
-        /* book index */
-        #book-index { display: none; }
-        #book-index {
-            padding: 0 2rem;
-            position: fixed;
-            top: 0;
-            overflow-y: auto;
-            height: 100vh;
-            background-color: white;
-            width: 40vw;
-        }
-        #close-btn { position: relative; top: 3.2rem; float: right}
-        /* book index ul */
-        #book-index ul li {
-            list-style-type: none;
-            margin-bottom: 1rem;
-        }
-        #book-index ul li a { text-decoration: underline; }
-        #book-index ul li span { text-transform: uppercase; font-size: 1rem; }
-
-
-        /* Responsive layout - makes a one column-layout instead of a two-column layout */
-        @media (max-width: 800px) {
-            #book-index {
-                width: 100vw;
-            }
-            #left, #right {
-                text-align: left;
-                padding: .8rem;
-            }
-            #left {
-
-            }
-        }
-
-    </style>
 </head>
 <body>
 
@@ -146,7 +68,7 @@
 
     <a title="Show Index" class="flip-btn" id="close-btn" href="">&#9746;</a>
     <h1>
-        <a href="">
+        <a title="Book Title" href="index.html">
             Book Title
         </a>
     </h1>
