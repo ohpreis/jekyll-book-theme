@@ -27,7 +27,7 @@ a.back-to { /* Link to a main website */
 
 /* Buttons
 ============================================== */
-button.big-button {
+button.big-button, a.big-button {
   background-color: $primary-color;
   border:none;
   border-radius: 35px;
@@ -39,7 +39,7 @@ button.big-button {
   display: inline-block;
   margin: 0;
 }
-button.medium-button {
+button.medium-button, a.medium-button {
   background-color: $primary-color;
   border:none;
   border-radius: 35px;
@@ -51,7 +51,7 @@ button.medium-button {
   display: inline-block;
   margin: 0;
 }
-button.big-button:hover, button.medium-button:hover {
+button.big-button:hover, button.medium-button:hover, a.big-button:hover, a.medium-button:hover {
   cursor: pointer;
   background-color: $primary-color-light;
 }
