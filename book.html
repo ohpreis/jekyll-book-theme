@@ -20,7 +20,7 @@
 
             <!-- Start: The button -->
             <div id="button">
-                <button class="flip-btn" id="btn">Book Title</button>
+                <a href="" title="Back Home" class="medium-button flip-btn" id="btn">&#8801; Book Title</a>
             </div><!-- End: The button -->
 
             <!-- Start: Current chapter heading, title and next chapter link -->
@@ -59,6 +59,23 @@
             head a little he could see his brown belly, slightly domed and divided by arches into stiff
             sections.
         </p>
+
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
     </div>
 
 </div><!-- End: The container -->
@@ -66,7 +83,7 @@
 <!-- Start: Chapter Index -->
 <div id="book-index">
 
-    <a title="Show Index" class="flip-btn" id="close-btn" href="">&#9746;</a>
+    <a title="Show/Close Book Index" class="flip-btn" id="close-btn" href="">&#9746;</a>
     <h1>
         <a title="Book Title" href="index.html">
             Book Title
@@ -132,8 +149,9 @@
     // const btn = document.getElementById("btn");
     // btn.addEventListener("click", showChapterIndex, false);
 
-    function flipIndex()
+    function flipIndex(e)
     {
+        e.preventDefault();
         let book_index = document.getElementById("book-index");
 
         if (isHidden(book_index)) {
@@ -141,11 +159,11 @@
         } else {
             book_index.style.display = "none";
         }
-        return false;
     }
     // Where el is the DOM element you'd like to test for visibility
     function isHidden(el) {
-        return (el.offsetParent === null)
+        let style = window.getComputedStyle(el);
+        return (style.display === 'none')
     }
 </script>
 

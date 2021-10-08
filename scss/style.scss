@@ -1,5 +1,5 @@
-$primary-color:  rgb(40, 50, 180);
-$primary-color-light: rgb(40, 124, 180);
+$primary-color:  rgb(40, 50, 150);
+$primary-color-light: rgb(32,95,195);
 $medium-gray: #708090;
 
 body {
@@ -59,7 +59,7 @@ button.big-button:hover, button.medium-button:hover, a.big-button:hover, a.mediu
 /* Headings & Paragraphs
 ============================================== */
 h1 {  /* Book and page titles */
-  margin: 1rem 0;
+  margin: .4rem 0;
   font-size: 4rem;
 }
 h2 {
@@ -71,6 +71,7 @@ h2 {
 p.subtitle { margin: 0 0 2rem 0; font-size: 2.5rem}
 p.fine-print { font-size: smaller; }
 p.footer {  border-top: thin solid $medium-gray; padding-top: 2rem; font-size: 1.2rem; font-weight: 600; font-style: italic }
+p.chapter-heading { margin-top: 4.2rem; }
 ul.book-index { /* book index ul */
   padding: 0;
 }
@@ -102,6 +103,13 @@ hr {
   flex-wrap: wrap;
 }
 .landing { /* Index/Home Page additional padding */
+  padding-top: 4rem;
+}
+
+#sticky-container {
+  top: 1.5rem;
+  position: -webkit-sticky;
+  position: sticky;
   padding-top: 4rem;
 }
 
